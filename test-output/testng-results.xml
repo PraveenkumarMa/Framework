@@ -2,24 +2,31 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-13T13:23:55 IST" name="Default suite" finished-at="2023-10-13T13:24:07 IST" duration-ms="11941">
+  <suite started-at="2023-10-13T15:45:51 IST" name="Default suite" finished-at="2023-10-13T15:46:22 IST" duration-ms="30637">
     <groups>
     </groups>
-    <test started-at="2023-10-13T13:23:55 IST" name="Default test" finished-at="2023-10-13T13:24:07 IST" duration-ms="11941">
-      <class name="com.testcases.CustomerAdd">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.CustomerAdd@5524cca1]" started-at="2023-10-13T13:23:55 IST" name="setup" finished-at="2023-10-13T13:24:03 IST" duration-ms="8701" status="PASS">
+    <test started-at="2023-10-13T15:45:51 IST" name="Default test" finished-at="2023-10-13T15:46:22 IST" duration-ms="30637">
+      <class name="com.testcases.Holidayfn">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.Holidayfn@5524cca1]" started-at="2023-10-13T15:45:52 IST" name="setup" finished-at="2023-10-13T15:46:03 IST" duration-ms="11137" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifycustomeradd()[pri:0, instance:com.testcases.CustomerAdd@5524cca1]" started-at="2023-10-13T13:24:03 IST" name="verifycustomeradd" finished-at="2023-10-13T13:24:07 IST" duration-ms="3172" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="verifyholiday()[pri:0, instance:com.testcases.Holidayfn@5524cca1]" started-at="2023-10-13T15:46:03 IST" name="verifyholiday" finished-at="2023-10-13T15:46:22 IST" duration-ms="19434" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[Cannot invoke "com.pageobjects.Loginfunctionality.verifylogin()" because "this.lp" is null]]>
+              <![CDATA[Keys to send should be a not null CharSequence]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.pageobjects.Loginfunctionality.verifylogin()" because "this.lp" is null
-at com.testcases.CustomerAdd.verifycustomeradd(CustomerAdd.java:31)
-at com.testcases.CustomerAdd.verifycustomeradd(CustomerAdd.java:32)
+              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy19.sendKeys(Unknown Source)
+at com.pageobjects.HolidaysPage.verifyholiday(HolidaysPage.java:61)
+at com.testcases.Holidayfn.verifyholiday(Holidayfn.java:29)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -50,15 +57,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifycustomeradd -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testcases.CustomerAdd@5524cca1]" started-at="2023-10-13T13:24:07 IST" name="teardown" finished-at="2023-10-13T13:24:07 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyholiday -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testcases.Holidayfn@5524cca1]" started-at="2023-10-13T15:46:22 IST" name="teardown" finished-at="2023-10-13T15:46:22 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.testcases.CustomerAdd -->
+      </class> <!-- com.testcases.Holidayfn -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

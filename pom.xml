@@ -66,6 +66,11 @@
         <version>2.11.0</version>
     </dependency>
 
-  </dependencies>
+    <dependency>
+    	<groupId>crm</groupId>
+    	<artifactId>Empirehomecrm</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+ </dependencies>
   
 </project>
