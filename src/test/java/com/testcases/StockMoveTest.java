@@ -9,7 +9,7 @@ import com.base.Basetest;
 import com.pageobjects.Loginfunctionality;
 import com.pageobjects.StockMovePage;
 
-public class StockMoveTest extends Basetest {
+public class StockMoveTest  extends Basetest {
 	Loginfunctionality lp;
     StockMovePage move; 
 	public StockMoveTest() {
@@ -33,7 +33,6 @@ public class StockMoveTest extends Basetest {
 	
 	@AfterMethod
 	public void teardown() {
+	//driver.close();	
 	}
-
-
 }

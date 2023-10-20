@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-13T15:45:51 IST" name="Default suite" finished-at="2023-10-13T15:46:22 IST" duration-ms="30637">
+  <suite started-at="2023-10-20T12:32:16 IST" name="Default suite" finished-at="2023-10-20T12:32:42 IST" duration-ms="26459">
     <groups>
     </groups>
-    <test started-at="2023-10-13T15:45:51 IST" name="Default test" finished-at="2023-10-13T15:46:22 IST" duration-ms="30637">
-      <class name="com.testcases.Holidayfn">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.Holidayfn@5524cca1]" started-at="2023-10-13T15:45:52 IST" name="setup" finished-at="2023-10-13T15:46:03 IST" duration-ms="11137" status="PASS">
+    <test started-at="2023-10-20T12:32:16 IST" name="Default test" finished-at="2023-10-20T12:32:42 IST" duration-ms="26459">
+      <class name="com.testcases.EmpRegistrationR">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.EmpRegistrationR@273444fe]" started-at="2023-10-20T12:32:16 IST" name="setup" finished-at="2023-10-20T12:32:36 IST" duration-ms="20032" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyholiday()[pri:0, instance:com.testcases.Holidayfn@5524cca1]" started-at="2023-10-13T15:46:03 IST" name="verifyholiday" finished-at="2023-10-13T15:46:22 IST" duration-ms="19434" status="FAIL">
+        <test-method signature="EmployeeRegistrationValidation()[pri:0, instance:com.testcases.EmpRegistrationR@273444fe]" started-at="2023-10-20T12:32:36 IST" name="EmployeeRegistrationValidation" finished-at="2023-10-20T12:32:42 IST" duration-ms="6347" status="FAIL">
           <exception class="java.lang.IllegalArgumentException">
             <message>
               <![CDATA[Keys to send should be a not null CharSequence]]>
@@ -24,9 +24,9 @@ at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAc
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy19.sendKeys(Unknown Source)
-at com.pageobjects.HolidaysPage.verifyholiday(HolidaysPage.java:61)
-at com.testcases.Holidayfn.verifyholiday(Holidayfn.java:29)
+at jdk.proxy2/jdk.proxy2.$Proxy18.sendKeys(Unknown Source)
+at com.pageobjects.EmpRegistration.verifyemployee(EmpRegistration.java:52)
+at com.testcases.EmpRegistrationR.EmployeeRegistrationValidation(EmpRegistrationR.java:36)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -60,12 +60,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyholiday -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testcases.Holidayfn@5524cca1]" started-at="2023-10-13T15:46:22 IST" name="teardown" finished-at="2023-10-13T15:46:22 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.testcases.Holidayfn -->
+        </test-method> <!-- EmployeeRegistrationValidation -->
+      </class> <!-- com.testcases.EmpRegistrationR -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

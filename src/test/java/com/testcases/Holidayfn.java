@@ -7,13 +7,12 @@ import org.testng.annotations.Test;
 
 import com.base.Basetest;
 import com.pageobjects.Holiday;
-import com.pageobjects.HolidaysPage;
 import com.pageobjects.Loginfunctionality;
 
 
 public class Holidayfn extends Basetest{
 	Loginfunctionality lop;
-	HolidaysPage hop;
+	Holiday hop;
     public Holidayfn() {
     super();
     }
@@ -21,7 +20,7 @@ public class Holidayfn extends Basetest{
     public void setup() {
     initialization();
   	lop = new Loginfunctionality();
-  	hop = new HolidaysPage();
+  	hop = new Holiday();
 	}
 	@Test
 	public void verifyholiday() throws Exception {

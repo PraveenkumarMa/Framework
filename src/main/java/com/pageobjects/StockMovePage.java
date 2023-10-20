@@ -59,13 +59,14 @@ public class StockMovePage extends Basetest{
     	Utils.selectDropdown(movto, "Showroom");
     	notes.sendKeys(prop.getProperty("table"));
     
+    	
 
     	Thread.sleep(2000);
     	Utils.mouseHoverandClickOnElement(driver, selectmnumber);
     	
     	
 
-    	textbox.sendKeys("1234567890");
+    	textbox.sendKeys("aa");
     	textbox.sendKeys(Keys.ENTER);
     	
     	Robot rb = new Robot();
@@ -86,7 +87,7 @@ public class StockMovePage extends Basetest{
     	notes.sendKeys(prop.getProperty("table"));
     	Thread.sleep(2000);
     	Utils.mouseHoverandClickOnElement(driver, selectmnumber);
-    
+    	
     	textbox.sendKeys("1234567890");
     	textbox.sendKeys(Keys.ENTER);
     	
@@ -101,6 +102,4 @@ public class StockMovePage extends Basetest{
     	
     	
     }
-
-
 }
