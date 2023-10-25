@@ -80,19 +80,14 @@ public class CategoriesFn extends Basetest {
 
 		edit.click();
 		
-//		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(15));
-//		wait.until(ExpectedConditions.invisibilityOf(loader));
+
 		
 		categoryname.clear();
 		categoryname.sendKeys(prop.getProperty("editcategoryName"));
 		Thread.sleep(2000);
 		savebutton.click();
 		
-		WebElement Edit = driver.findElement(By.xpath("//div[@id='mydatatable_info']"));
-
-	
-		
-		
+		WebElement Edit = driver.findElement(By.xpath("//div[@id='mydatatable_info']"));	
 	}
 	
 	public void verifydeletecategory() throws Throwable {
@@ -102,44 +97,8 @@ public class CategoriesFn extends Basetest {
 		
 		Thread.sleep(2000);
 		
-		  
-//		Utils.dropdowns(length, "100");
-//		
-//		 List<WebElement> rows = driver.findElements(By.xpath("//table[@id='mydatatable']//tbody//tr"));
-//		 int rowsize = rows.size();
-//		 System.out.println(rowsize);
-//		 
-//		  for(int i=1;i<rowsize;i++) {
-//			 
-//			 List<WebElement> cells = rows.get(i).findElements(By.xpath(".//td"));
-//			 
-//		     for(WebElement cell:cells) {
-//		    	  
-//		    String	countries =cell.getText();
-//		    System.out.println(countries);
-//		    
-//		    
-//				   if(countries.equals("editcategoryName")) {
-//				    	
-//				     WebElement checkbox = rows.get(i).findElement(By.xpath(".//i[@class='fa fa-trash-o']"));
-//				    	checkbox.click();
-//				    	break;
-//				    }
-//			 }
-//			 
-//		 
-//	
-//		 }
-		
-		
 		delete.click();
 		Thread.sleep(2000);
 		alert.click();
-		
-		
-		
-		
-	}
-
-}
+		}}
 
