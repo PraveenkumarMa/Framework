@@ -5,67 +5,66 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.base.Basetest;
-import com.pageobjects.CategoriesFn;
+import com.pageobjects.LocationFn;
 import com.pageobjects.Loginfunctionality;
 
-public class Categories extends Basetest {
+public class Location extends Basetest {
 	
 	Loginfunctionality lf;
-	CategoriesFn ctfn;
+	LocationFn location;
 	
-	public Categories() {
+	
+	public Location() {
 		super();
 	}
 	
 	@BeforeTest
 	public void setup() {
+		
 		initialization();
 		
 		lf = new Loginfunctionality();
 		lf.verifylogin();
 		
-		ctfn = new CategoriesFn();
+		location = new LocationFn();
+		
 	}
 	
-	
 	@Test (priority = 1)
-	public void addnewcategoryvalidation() throws Throwable {
-		ctfn.common();
-		ctfn.verifyaddnewcategory();
+	public void addnewlocationvalidation() throws Throwable {
+		
+		location.verifyaddnewlocation();
 		
 		List<WebElement> records = driver.findElements(By.tagName("tr"));
 		int recordcount = records.size();
-	    Assert.assertEquals(recordcount, 8);
+	    Assert.assertEquals(recordcount, 82);
 		
 	}
 	
 	@Test (priority = 2)
-	public void editcategoryvalidation() throws Throwable {
+	public void editlocationvalidation() throws Throwable {
 		
-		ctfn.verifyeditcategory();
+		location.verifyeditlocation();
 		
 		String urltest = driver.getCurrentUrl();
-		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Master/Categories");
+		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Master/Loctation");
 	}
 	
+	
 	@Test (priority = 3)
-	public void deletecategoryvalidation() throws Throwable {
+	public void deletelocationvalidation() throws Throwable {
 		
-		ctfn.verifydeletecategory();
+		location.verifydeletelocation();
 		
 		List<WebElement> records = driver.findElements(By.tagName("tr"));
 		int recordcount = records.size();
-	    Assert.assertEquals(recordcount, 7);
-	}
+	    Assert.assertEquals(recordcount, 81);
 
-	@AfterTest
-	public void teardown() {
+		
 		
 	}}
-
 

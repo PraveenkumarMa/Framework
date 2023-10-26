@@ -10,62 +10,66 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.base.Basetest;
-import com.pageobjects.CategoriesFn;
+import com.pageobjects.ConditionFn;
 import com.pageobjects.Loginfunctionality;
 
-public class Categories extends Basetest {
+public class Condition  extends Basetest {
 	
 	Loginfunctionality lf;
-	CategoriesFn ctfn;
+	ConditionFn condition;
 	
-	public Categories() {
+	public Condition() {
 		super();
 	}
 	
 	@BeforeTest
 	public void setup() {
+		
 		initialization();
 		
 		lf = new Loginfunctionality();
 		lf.verifylogin();
 		
-		ctfn = new CategoriesFn();
+		condition = new ConditionFn();
 	}
 	
 	
 	@Test (priority = 1)
-	public void addnewcategoryvalidation() throws Throwable {
-		ctfn.common();
-		ctfn.verifyaddnewcategory();
+	public void addnewconditionvalidation() throws Throwable {
+		
+		condition.verifyaddcondition();
 		
 		List<WebElement> records = driver.findElements(By.tagName("tr"));
 		int recordcount = records.size();
-	    Assert.assertEquals(recordcount, 8);
-		
+	    Assert.assertEquals(recordcount, 36);
 	}
 	
 	@Test (priority = 2)
-	public void editcategoryvalidation() throws Throwable {
+	public void editconditionvalidation() throws Throwable {
 		
-		ctfn.verifyeditcategory();
+		condition.verifyeditcondition();
 		
 		String urltest = driver.getCurrentUrl();
-		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Master/Categories");
+		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Master/Condition");
+		
+		
 	}
 	
+	
 	@Test (priority = 3)
-	public void deletecategoryvalidation() throws Throwable {
+	public void deleteconditionvalidation() throws Throwable {
 		
-		ctfn.verifydeletecategory();
+		condition.verifydeletecondition();
 		
 		List<WebElement> records = driver.findElements(By.tagName("tr"));
 		int recordcount = records.size();
-	    Assert.assertEquals(recordcount, 7);
+	    Assert.assertEquals(recordcount, 35);
+		
+		
 	}
-
+	
 	@AfterTest
 	public void teardown() {
 		
 	}}
-
 

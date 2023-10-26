@@ -5,67 +5,62 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.base.Basetest;
-import com.pageobjects.CategoriesFn;
 import com.pageobjects.Loginfunctionality;
+import com.pageobjects.SubcategoryFn;
 
-public class Categories extends Basetest {
+public class Subcategory extends Basetest {
 	
 	Loginfunctionality lf;
-	CategoriesFn ctfn;
+	SubcategoryFn subf;
 	
-	public Categories() {
+	public Subcategory() {
 		super();
 	}
 	
 	@BeforeTest
-	public void setup() {
+	public void setup()  {
+		
 		initialization();
 		
 		lf = new Loginfunctionality();
 		lf.verifylogin();
 		
-		ctfn = new CategoriesFn();
+		subf = new SubcategoryFn();
+		
 	}
 	
-	
 	@Test (priority = 1)
-	public void addnewcategoryvalidation() throws Throwable {
-		ctfn.common();
-		ctfn.verifyaddnewcategory();
+	public void addsubcategoryvalidation() throws Throwable {
+		
+		subf.verifyaddnewsubcategory();
 		
 		List<WebElement> records = driver.findElements(By.tagName("tr"));
 		int recordcount = records.size();
-	    Assert.assertEquals(recordcount, 8);
+	    Assert.assertEquals(recordcount, 2);
 		
 	}
 	
 	@Test (priority = 2)
-	public void editcategoryvalidation() throws Throwable {
+	public void editsubcategoryvalidation() throws Throwable {
 		
-		ctfn.verifyeditcategory();
+		subf.verifyeditsubcategory();
 		
 		String urltest = driver.getCurrentUrl();
-		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Master/Categories");
+		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Master/Subcategories?catId=527");
 	}
 	
 	@Test (priority = 3)
-	public void deletecategoryvalidation() throws Throwable {
+	public void deletesubcategoryvalidation() throws Throwable {
 		
-		ctfn.verifydeletecategory();
+		subf.verifydeletesubcategory();
 		
 		List<WebElement> records = driver.findElements(By.tagName("tr"));
 		int recordcount = records.size();
-	    Assert.assertEquals(recordcount, 7);
-	}
-
-	@AfterTest
-	public void teardown() {
+	    Assert.assertEquals(recordcount, 1);
 		
 	}}
-
 
