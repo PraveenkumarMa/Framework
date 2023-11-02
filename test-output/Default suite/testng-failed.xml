@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testcases.Subcategory">
+      <class name="com.testcases.ShiftTest">
         <methods>
+          <include name="deleteshiftvalidation"/>
+          <include name="editshiftvalidation"/>
+          <include name="teardown"/>
           <include name="setup"/>
-          <include name="editsubcategoryvalidation"/>
-          <include name="addsubcategoryvalidation"/>
-          <include name="deletesubcategoryvalidation"/>
+          <include name="addnewshiftvalidation"/>
         </methods>
-      </class> <!-- com.testcases.Subcategory -->
+      </class> <!-- com.testcases.ShiftTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
