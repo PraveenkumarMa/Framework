@@ -25,4 +25,19 @@ public class Utils {
 		
 	}
 
+	public static void robot(String property) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void robot1(String property) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void Robot(String property) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

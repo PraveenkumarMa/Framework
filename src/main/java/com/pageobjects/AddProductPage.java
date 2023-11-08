@@ -5,12 +5,14 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.Basetest;
+import com.utils.Utils;
 
 public class AddProductPage extends Basetest {
 	@FindBy(xpath="//span[@class='pe-7s-keypad']")
@@ -61,6 +63,9 @@ public class AddProductPage extends Basetest {
     @FindBy(xpath="//button[normalize-space()='Save']")
     WebElement save;
     
+    @FindBy (xpath = "//input[@placeholder='Search']")
+	WebElement modelsearch;
+    
     public AddProductPage() {
     	PageFactory.initElements(driver, this);;
     }
@@ -85,24 +90,19 @@ public class AddProductPage extends Basetest {
     	qty.sendKeys(quantity);
 
     	Thread.sleep(3000);
-    	Actions ac = new Actions(driver);
-    	ac.moveToElement(img).click().perform();
-    	
-     	Robot rb = new Robot();
-    	rb.delay(2000);
-    	
-    	StringSelection path = new StringSelection("\"C:\\Users\\ADMIN\\Desktop\\WhatsApp Image 2023-10-10 at 14.27.13.jpeg\"");
-    	Toolkit.getDefaultToolkit().getSystemClipboard().setContents(path, null);
-    	rb.keyPress(KeyEvent.VK_CONTROL);
-		rb.keyPress(KeyEvent.VK_V);
+	Utils.actions(driver, img);
 		
-		rb.keyRelease(KeyEvent.VK_CONTROL);
-		rb.keyRelease(KeyEvent.VK_V);
+		Utils.robot(prop.getProperty("imagepath"));
 		
-		rb.keyPress(KeyEvent.VK_ENTER);
-		rb.keyRelease(KeyEvent.VK_ENTER);
-		
-		save.click();
+		Thread.sleep(2000);
+				
+			save.click();
+			
+			Thread.sleep(2000);
+			
+			modelsearch.sendKeys(prop.getProperty("Modelsearch"));
+			modelsearch.sendKeys(Keys.ENTER);
+			
     	
     	}
     	
