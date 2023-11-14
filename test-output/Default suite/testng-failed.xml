@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testcases.EmpRegistrationR">
+      <class name="com.testcases.EndtoEnd">
         <methods>
-          <include name="EmployeeRegistrationValidation"/>
+          <include name="salesorderdispatchvalidation"/>
           <include name="setup"/>
+          <include name="salesexecutivevalidation"/>
         </methods>
-      </class> <!-- com.testcases.EmpRegistrationR -->
+      </class> <!-- com.testcases.EndtoEnd -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

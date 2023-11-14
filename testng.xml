@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.testcases.ShiftTest"/>
+      <class name="com.testcases.Subcategory"/>
+      <class name="com.testcases.Holidayfn"/>
+      <class name="com.testcases.Condition"/>
+      <class name="com.testcases.LoginwithmultipleData"/>
+      <class name="com.testcases.StockMoveTest"/>
+      <class name="com.testcases.Company"/>
+      <class name="com.testcases.Categories"/>
+      <class name="com.testcases.CustomerAdd"/>
+      <class name="com.testcases.Logintest"/>
+      <class name="com.testcases.Location"/>
+      <class name="com.testcases.EndtoEnd"/>
+      <class name="com.testcases.Logout"/>
+      <class name="com.testcases.UsertypeTest"/>
+      <class name="com.testcases.AddProductTest"/>
+      <class name="com.testcases.EmpRegistrationR"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
