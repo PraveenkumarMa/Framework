@@ -11,8 +11,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.utils.EventListeners;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.managers.FirefoxDriverManager;
@@ -26,7 +28,13 @@ public class Basetest {
 	public static WebDriver driver;
 	//protected ExtentReports extentreports;
 	
-
+	protected ExtentReports extentreports; /// er chart
+	public static EventFiringWebDriver e_driver; // listeners(Sreenshot)
+	public static EventListeners listenerss; // listeners(Sreenshot)
+	
+	
+	
+	
 	public Basetest() {
 
 		try {
@@ -64,6 +72,12 @@ public class Basetest {
 
 			driver = new FirefoxDriver();
 		}
+		e_driver = new EventFiringWebDriver(driver);
+		
+		listenerss = new EventListeners();
+		e_driver.register(listenerss); // method(register)
+		driver = e_driver;
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 		driver.get(prop.getProperty("url"));

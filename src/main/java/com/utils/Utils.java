@@ -30,10 +30,17 @@ public class Utils {
 		
 	}
 
-	public static void robot1(String property) {
+    public static void robot1(String property) {
 		// TODO Auto-generated method stub
 		
 	}
+	//public static void captureAndSaveScreenshot(WebDriver driver, String destFilePath) {
+		//try {
+			//TakesScreenshot screenshot = (TakesScreenshot) driver;
+			//File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+			//File destFile 
+			
+		//}}
 
 	public static void Robot(String property) {
 		// TODO Auto-generated method stub
